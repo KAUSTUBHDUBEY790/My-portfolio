@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 
 </head>
-<body>
+<body onload="loading()">
+    <div id="loader">
+    </div>
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
@@ -233,7 +235,7 @@
                             <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
                         </div>
                         <div class="button-area">
-                            <button type="submit">Send message</button>
+                            <button type="submit" onclick="sendmail(); reset(); return false">Send message</button>
                         </div>
                     </form>
                 </div>
@@ -245,6 +247,15 @@
     <footer>
         <span>Created By <a href="https://linkedin.com/in/kaustubh-dubey-445a761a4">haz3r</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
     </footer>
+    <script>
+        var preload = document.getElementById('loader')
+        function loading(){
+            preload.style.display= 'none';
+        }
+       
+
+    </script>
+    <script src="Include a script tag to https://smtpjs.com/v3/smtp.js"></script>
 
     <script src="/home.js"></script>
 </body>
